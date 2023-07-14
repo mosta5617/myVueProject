@@ -1,14 +1,26 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <!-- <div>{{ greet }} {{ name }} </div> -->
+
+  <!-- <div v-html="hack"></div> -->
+  <!-- <div v-bind:id="headingID">Heading</div> -->
+  <button v-bind:disabled="isDisabled">Bind</button>
+
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: 'App',
+  data(){
+    return{
+      greet: 'Hello',
+      name: 'Uranus How are you?',
+      channel: '<b> Fruits Archive </b>',
+      hack: '<a href="#" onclick=alert(You have been hacked)> Win a prize! <a/>',
+      headingID: 'heading ID',
+      isDisabled: true
+    };
+  },
+};
 </script>
 
 <style>
